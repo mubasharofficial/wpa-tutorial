@@ -9,7 +9,7 @@ function App() {
                 <Container>
                   <Navbar.Brand href="#home"><Link to='/'> Home </Link></Navbar.Brand>
                   <Nav className="me-auto">
-                  <Link to='/'>  <Nav.Link href="#home">Home </Nav.Link></Link>
+                  <Link to='/'>  <Nav.Link href="#features">Home  </Nav.Link> </Link>
                   <Link to='/aboute'>  <Nav.Link href="#features">Aboute  </Nav.Link> </Link>
                   <Link to='/users'> <Nav.Link href="#pricing">Users  </Nav.Link> </Link>
                   </Nav>
