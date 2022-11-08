@@ -21,17 +21,20 @@ this.addEventListener("fetch",(event)=>{
 
     if(!navigator.onLine)
     {
-        
+        event.respondWith(
+            caches.match(event.request)
+            .then((resp)=>{
+                    if(resp)
+                    {
+                        return resp;
+                    } else{
+                        let requestURL = event.request.clone();
+                        return fetch(requestURL);
+                    }
+            })
+        )
     }
-event.respondWith(
-    caches.match(event.request)
-    .then((resp)=>{
-            if(resp)
-            {
-                return resp;
-            }
-    })
-)
+
 })
 
 
